@@ -1,0 +1,24 @@
+{
+  "format": "specter-capture-v1",
+  "network": "esmeralda",
+  "transactionId": "3ef1a1193ffc0cb38ef1daa6278c7f36f77954e1b4e905171c3a8fa031c0b223",
+  "files": [
+    {
+      "file": "envelope.raw.json",
+      "url": "https://ootle-indexer-a.tari.com/transactions/3ef1a1193ffc0cb38ef1daa6278c7f36f77954e1b4e905171c3a8fa031c0b223",
+      "bytes": 1724,
+      "sha256": "403b8eea6a915797f2edc45d6390f289b9bdd9d5b4a61654e849d3825410b328",
+      "capturedAt": "2026-10-21T11:39:08.225Z",
+      "httpStatus": 200
+    },
+    {
+      "file": "result.raw.json",
+      "url": "https://ootle-indexer-a.tari.com/transactions/3ef1a1193ffc0cb38ef1daa6278c7f36f77954e1b4e905171c3a8fa031c0b223/result",
+      "bytes": 11244,
+      "sha256": "47baab883cb2ca02d22969c461c3c3245e13ea2592dc726f5845e2fa9bd8ac94",
+      "capturedAt": "2026-10-21T11:39:08.414Z",
+      "httpStatus": 200
+    }
+  ],
+  "verification": "Downloaded over HTTPS from one public indexer; signatures and consensus proofs not verified."
+}

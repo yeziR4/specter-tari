@@ -1,0 +1,16 @@
+{
+  "format": "specter-report-commitment-v1",
+  "network": "mainnet",
+  "transactionId": "018c99cfbd234d88d4a3664da505f8bc2a9a09d7c65f574ac1f68b19a6ef6a6c",
+  "reportSha256": "0f4457fa78730ef2ec3672c43b095b6d6943513e692327dfdd356e190ebc0a92",
+  "reportBytes": 1467,
+  "reportText": "{\n  \"format\": \"specter-report-v1\",\n  \"scope\": \"v1-instruction-fields\",\n  \"sourceCommit\": \"9f6c04e9107b03d22618d88339e27dd37b1f0c46\",\n  \"findings\": [\n    {\n      \"rule\": \"PUBLIC_COMPONENT_CALL\",\n      \"status\": \"observed\",\n      \"path\": \"$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod.call.Address\",\n      \"value\": \"component_6086ea5b1b6694f71d6c3e5ef7e241c08022d6649a40c244c3419d97ecebe32e\",\n      \"explanation\": \"Public component reference for method pay_fee; does not identify a person.\"\n    },\n    {\n      \"rule\": \"PUBLIC_FEE_COMPONENT\",\n      \"status\": \"observed\",\n      \"path\": \"$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod.call.Address\",\n      \"value\": \"component_6086ea5b1b6694f71d6c3e5ef7e241c08022d6649a40c244c3419d97ecebe32e\",\n      \"explanation\": \"Fee-stage pay_fee targets this public component. This alone does not establish who owns it.\"\n    }\n  ],\n  \"unknowns\": [\n    \"$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod: arguments and executed component internals are not analyzed\",\n    \"$.transaction.transaction.V1.body.transaction.instructions[0]: PublishTemplate is not analyzed\",\n    \"Signer reuse, input graph, events, state diffs, network metadata and execution finality are outside this prototype.\"\n  ],\n  \"observedInstructionCount\": 2,\n  \"conclusion\": \"No conclusion about anonymity, ownership, finality or transaction validity.\",\n  \"network\": \"mainnet\"\n}",
+  "contract": "SpecterReportReceipt",
+  "deployment": {
+    "network": "mainnet",
+    "templateAddress": "9b41600aec8aaefb3c66e00567a060cafbb1e51fb4a904074f4faaabff6cb725",
+    "publicationTransaction": "198f98d7ce75568702c9c3906f1419cf3fb9f53487e05ed829a9e56b6a2c021c",
+    "finalizedUtc": "2026-11-11T14:12:54Z"
+  },
+  "limits": "A hash commitment does not verify report accuracy, transaction existence or anonymity. Receipt author and transaction link are public."
+}

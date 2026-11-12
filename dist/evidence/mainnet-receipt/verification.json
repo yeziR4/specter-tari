@@ -1,0 +1,31 @@
+{
+  "status": "stored-fields-match-and-getter-calls-committed",
+  "network": "mainnet",
+  "receiptTransaction": "46a39f9bb07b89a130d44ff4415aebedfabdf6c9f89c16f714b948cb429a7391",
+  "receiptComponent": "component_49f15c537fbec61d852175fd74a41027362167ccd1b87b0b0ef15074b241c078",
+  "templateAddress": "9b41600aec8aaefb3c66e00567a060cafbb1e51fb4a904074f4faaabff6cb725",
+  "reportSha256": "c09fb86520b06bb0f263e84e9e10336f1c0aa83db6f8a48247a743e295b15483",
+  "inspectedTransaction": "198f98d7ce75568702c9c3906f1419cf3fb9f53487e05ed829a9e56b6a2c021c",
+  "author": "da8b317049487cc2097430891b3d6761c6d693e61bdd7ee3ccc2e0f3c17f222c",
+  "recordedEpoch": 38462,
+  "getterCallsCommitted": [
+    "report_hash",
+    "transaction_id",
+    "author",
+    "recorded_epoch",
+    "schema_version"
+  ],
+  "feeMicroTari": 3550,
+  "finalizedUtc": "2026-11-11 14:41:22.0",
+  "duplicateReceipts": [
+    "121ac88afb41fb6edad0da2bc76a6914eb73f41109d31745965081fa38b80123",
+    "8b6008fa5a0254b0668d4eccff4bab36697ac957d7a8e962946f168425108ecd"
+  ],
+  "limitations": "Single public indexer responses; no independent signature, Merkle-proof or consensus-proof verification. Stored fields decoded and checked; getter invocation success checked, individual returned values are not exposed in the persisted result. A commitment does not certify report correctness or anonymity.",
+  "filesSha256": {
+    "report.json": "c09fb86520b06bb0f263e84e9e10336f1c0aa83db6f8a48247a743e295b15483",
+    "envelope.raw.json": "73bdb737e0d8c906e7b8ebaa78695a79a5426e2f2ee4f08c0510d64e4cd4fc7c",
+    "result.raw.json": "043eecd4d5684df814fa20c739a89efc19be0298ef16f45e80bfdaac6f1c74ff",
+    "substate.json": "6704bebdadc6a3fe3883bba622376d42c466635081ab006744856e2716f597f1"
+  }
+}

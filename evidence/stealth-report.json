@@ -1,0 +1,37 @@
+{
+  "format": "specter-report-v1",
+  "scope": "v1-instruction-fields",
+  "sourceCommit": "9f6c04e9107b03d22618d88339e27dd37b1f0c46",
+  "findings": [
+    {
+      "rule": "REVEALED_OUTPUT_AMOUNT",
+      "status": "observed",
+      "path": "$.transaction.transaction.V1.body.transaction.fee_instructions[0].StealthTransfer.statement.outputs_statement.revealed_output.amount",
+      "value": "100000",
+      "explanation": "Revealed output amount; destination depends on subsequent instructions."
+    },
+    {
+      "rule": "STEALTH_OUTPUT_COUNT",
+      "status": "observed",
+      "path": "$.transaction.transaction.V1.body.transaction.fee_instructions[0].StealthTransfer.statement.outputs_statement.outputs",
+      "value": 1,
+      "explanation": "Public output count; a single count does not establish a correlation."
+    },
+    {
+      "rule": "STEALTH_OUTPUT_COUNT",
+      "status": "observed",
+      "path": "$.transaction.transaction.V1.body.transaction.instructions[0].StealthTransfer.statement.outputs_statement.outputs",
+      "value": 1,
+      "explanation": "Public output count; a single count does not establish a correlation."
+    }
+  ],
+  "unknowns": [
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[0].StealthTransfer.statement: proofs, witness paths, encrypted payloads and output ownership are not verified",
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[1]: PutLastInstructionOutputOnWorkspace is not analyzed",
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[2]: PayFeeFromBucket is not analyzed",
+    "$.transaction.transaction.V1.body.transaction.instructions[0].StealthTransfer.statement: proofs, witness paths, encrypted payloads and output ownership are not verified",
+    "Signer reuse, input graph, events, state diffs, network metadata and execution finality are outside this prototype."
+  ],
+  "observedInstructionCount": 4,
+  "conclusion": "No conclusion about anonymity, ownership, finality or transaction validity."
+}

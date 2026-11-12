@@ -1,0 +1,20 @@
+# Specter Report Receipt
+
+Immutable report commitments for the Specter inspector. This contract records a SHA-256 digest of the exact exported report bytes, the inspected transaction ID, the transaction signer key and the consensus epoch. It does not verify reports, transaction existence, report contents, network identity or privacy. Do not anchor sensitive low-entropy material without considering hash disclosure. No report text is submitted.
+
+No assets, vaults, withdraw methods, upgrades or administrator are present. Each commitment creates a separate component; duplicates are permitted. There is no global storage list to grow without bound. Receipt author identity and links are public. Losing an exported report prevents independent digest verification unless another copy exists.
+
+## Publication
+Use a mainnet Ootle wallet capable of template publication. Upload `specter_report_receipt.wasm`, verify SHA-256 against artifact.json, choose the funded mainnet fee account and request the wallet dry-run/Estimate Fee. No fee has yet been estimated for the actual mainnet account. Stop if the estimated charge exceeds your chosen spending limit. Review and submit yourself. Save transaction ID, template address and timestamp from the indexer-reported Commit. Do not treat AcceptFeeRejectRest as a successful deployment.
+
+Sapient's checked dApp operation schema has no transaction blobs parameter; raw PublishTemplate needs a blob, so the existing Specter wallet connector cannot publish this binary. The Ootle wallet daemon web UI has a Publish Template form with upload and fee estimation. These are different wallets; importing recovery words into a new wallet is not required or recommended by this pack. A separate funded publisher account can publish the template.
+
+## Integration after publication
+Provide the successful template address and publication transaction ID so Specter can pin that deployment before requesting a `commit(report_sha256, transaction_id)` call. Publication alone does not complete this integration or establish bonus eligibility. The template must be used by the app and the contest entry must satisfy its rules.
+
+## Build / tests
+Source is original MIT-licensed code. The current binary was rebuilt with Rust 1.97.1 and tari_template_lib =0.40.0 from crates.io. Cargo.lock pins resolved dependencies. Build with `cargo build --locked --release --target wasm32-unknown-unknown`. Mainnet rejected the earlier 0.36.0 template-definition layout; that binary is superseded. The current binary passed the wallet's mainnet publication dry run, with an estimated fee of 786209 microTARI; this is not publication or a test of every contract method.
+
+tests/engine.rs is an engine-harness integration test, not `cargo test` in this standalone crate: copy the template to crates/engine/tests/templates/specter_receipt with a relative template_lib path and the test to crates/engine/tests/specter_receipt.rs, then run cargo test -p tari_engine --test specter_receipt. Two tests passed for the original implementation on the older pinned engine. They cover round trip values, consensus epoch, locked upgrade/no owner configuration, nonexistent mutator rejection and malformed input rejection. These tests have not yet been rerun against the current engine/library; live receipt execution and getter verification remain required.
+
+Published on mainnet at template_9b41600aec8aaefb3c66e00567a060cafbb1e51fb4a904074f4faaabff6cb725. Publication transaction 198f98d7ce75568702c9c3906f1419cf3fb9f53487e05ed829a9e56b6a2c021c has indexer-reported Commit, finalized 2026-11-11T14:12:54Z; actual fee 0.786197 TARI. ABI and catalogue verified; no independent consensus-proof verification or security audit. Live receipt execution verified through transaction 46a39f9bb07b89a130d44ff4415aebedfabdf6c9f89c16f714b948cb429a7391. Stored fields match the report bundle; all five getter calls committed. Individual returned values are not exposed in the persisted execution response. See the mainnet-receipt evidence archive.

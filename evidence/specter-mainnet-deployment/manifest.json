@@ -1,0 +1,16 @@
+{
+  "network": "mainnet",
+  "templateName": "SpecterReportReceipt",
+  "templateAddress": "9b41600aec8aaefb3c66e00567a060cafbb1e51fb4a904074f4faaabff6cb725",
+  "publicationTransaction": "198f98d7ce75568702c9c3906f1419cf3fb9f53487e05ed829a9e56b6a2c021c",
+  "createdUtc": "2026-11-11T14:12:44Z",
+  "finalizedUtc": "2026-11-11T14:12:54Z",
+  "outcome": "Commit",
+  "feeMicroTari": 786197,
+  "inputWasmSha256": "4f50c43bd463a57a3101745d42ee6f794ca10c691f5888f28476fcb0e479b83f",
+  "optimizedCodeBytes": 83125,
+  "catalogueBinaryHash": "27c16be6367eabd4b314eeedbb22349bc1be8fba248cac678a68e1971bc3161c",
+  "indexerSource": "https://indexer-a.ootle.tari.com/transactions/198f98d7ce75568702c9c3906f1419cf3fb9f53487e05ed829a9e56b6a2c021c",
+  "envelopeSha256": "3f07d30746cfb1c8b3a0bc432748e645ebae174279ddb1110a8678fe81e28573",
+  "limitation": "Indexer-reported Commit and catalogue/ABI checked. No independent signature or consensus proof verification. Live receipt execution and app integration remain pending."
+}

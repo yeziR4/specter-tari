@@ -1,0 +1,15 @@
+{
+  "format": "specter-observation-v1",
+  "provenance": {
+    "kind": "manual-transcription-of-public-explorer",
+    "capturedDate": "2026-10-21",
+    "network": "esmeralda",
+    "transactionId": "3ef1a1193ffc0cb38ef1daa6278c7f36f77954e1b4e905171c3a8fa031c0b223",
+    "url": "https://explorer.tari.mw/tx/3ef1a1193ffc0cb38ef1daa6278c7f36f77954e1b4e905171c3a8fa031c0b223",
+    "explorerReportedOutcome": "Commit",
+    "limitations": "Only fee method and target were transcribed from expanded Raw transaction JSON. Args, main instructions, signatures, inputs and all other fields omitted. Not a full transaction archive; no cryptographic finality verification."
+  },
+  "observed": {
+    "fee_instructions": [{"CallMethod": {"call": {"Address": "component_ae57fb3f8deb34cef1ed966bbe33934cae9c2509c073155b9ca0231f6eabca71"}, "method": "pay_fee"}}]
+  }
+}

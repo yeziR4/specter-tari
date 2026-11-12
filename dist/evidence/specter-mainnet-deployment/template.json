@@ -1,0 +1,73 @@
+{
+  "name": "SpecterReportReceipt",
+  "definition": {
+    "V2": {
+      "template_name": "SpecterReportReceipt",
+      "abi_version": 0,
+      "functions": [
+        {
+          "name": "commit",
+          "kind": "Function",
+          "arguments": [
+            {
+              "name": "report_sha256",
+              "arg_type": "String"
+            },
+            {
+              "name": "transaction_id",
+              "arg_type": "String"
+            }
+          ],
+          "output": {
+            "Other": {
+              "name": "Component<SpecterReportReceipt>"
+            }
+          }
+        },
+        {
+          "name": "report_hash",
+          "kind": {
+            "Method": "Ref"
+          },
+          "arguments": [],
+          "output": "String"
+        },
+        {
+          "name": "transaction_id",
+          "kind": {
+            "Method": "Ref"
+          },
+          "arguments": [],
+          "output": "String"
+        },
+        {
+          "name": "author",
+          "kind": {
+            "Method": "Ref"
+          },
+          "arguments": [],
+          "output": {
+            "WellKnown": "RistrettoPublicKeyBytes"
+          }
+        },
+        {
+          "name": "recorded_epoch",
+          "kind": {
+            "Method": "Ref"
+          },
+          "arguments": [],
+          "output": "U64"
+        },
+        {
+          "name": "schema_version",
+          "kind": {
+            "Method": "Ref"
+          },
+          "arguments": [],
+          "output": "U32"
+        }
+      ]
+    }
+  },
+  "code_size": 83125
+}

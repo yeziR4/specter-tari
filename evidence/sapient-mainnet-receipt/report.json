@@ -1,0 +1,29 @@
+{
+  "format": "specter-report-v1",
+  "scope": "v1-instruction-fields",
+  "sourceCommit": "9f6c04e9107b03d22618d88339e27dd37b1f0c46",
+  "findings": [
+    {
+      "rule": "PUBLIC_COMPONENT_CALL",
+      "status": "observed",
+      "path": "$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod.call.Address",
+      "value": "component_6086ea5b1b6694f71d6c3e5ef7e241c08022d6649a40c244c3419d97ecebe32e",
+      "explanation": "Public component reference for method pay_fee; does not identify a person."
+    },
+    {
+      "rule": "PUBLIC_FEE_COMPONENT",
+      "status": "observed",
+      "path": "$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod.call.Address",
+      "value": "component_6086ea5b1b6694f71d6c3e5ef7e241c08022d6649a40c244c3419d97ecebe32e",
+      "explanation": "Fee-stage pay_fee targets this public component. This alone does not establish who owns it."
+    }
+  ],
+  "unknowns": [
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod: arguments and executed component internals are not analyzed",
+    "$.transaction.transaction.V1.body.transaction.instructions[0]: PublishTemplate is not analyzed",
+    "Signer reuse, input graph, events, state diffs, network metadata and execution finality are outside this prototype."
+  ],
+  "observedInstructionCount": 2,
+  "conclusion": "No conclusion about anonymity, ownership, finality or transaction validity.",
+  "network": "mainnet"
+}

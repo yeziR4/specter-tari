@@ -1,0 +1,7 @@
+{
+  "network": "mainnet",
+  "source": "https://indexer-a.ootle.tari.com/transactions/018c99cfbd234d88d4a3664da505f8bc2a9a09d7c65f574ac1f68b19a6ef6a6c",
+  "capturedAt": "2026-11-11T07:06:29.741080+00:00",
+  "sha256": "d25467fd361e66aee122e91b64cf2a8c15c1b40fb590b14d625f2970da6b038c",
+  "limitation": "Single indexer response, no signature or consensus-proof verification. Third-party publication, not a Specter contract."
+}

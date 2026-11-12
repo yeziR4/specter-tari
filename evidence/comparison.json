@@ -1,0 +1,40 @@
+{
+  "format": "specter-comparison-v1",
+  "controlled": false,
+  "interpretation": "Different captured transactions; counts do not establish an improvement or equivalent application intent.",
+  "rules": [
+    {
+      "rule": "PUBLIC_COMPONENT_CALL",
+      "left": 2,
+      "right": 0
+    },
+    {
+      "rule": "PUBLIC_FEE_COMPONENT",
+      "left": 1,
+      "right": 0
+    },
+    {
+      "rule": "REVEALED_OUTPUT_AMOUNT",
+      "left": 0,
+      "right": 1
+    },
+    {
+      "rule": "STEALTH_OUTPUT_COUNT",
+      "left": 0,
+      "right": 2
+    }
+  ],
+  "leftUnknowns": [
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod: arguments and executed component internals are not analyzed",
+    "$.transaction.transaction.V1.body.transaction.instructions[0].CallMethod: arguments and executed component internals are not analyzed",
+    "Signer reuse, input graph, events, state diffs, network metadata and execution finality are outside this prototype."
+  ],
+  "rightUnknowns": [
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[0].StealthTransfer.statement: proofs, witness paths, encrypted payloads and output ownership are not verified",
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[1]: PutLastInstructionOutputOnWorkspace is not analyzed",
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[2]: PayFeeFromBucket is not analyzed",
+    "$.transaction.transaction.V1.body.transaction.instructions[0].StealthTransfer.statement: proofs, witness paths, encrypted payloads and output ownership are not verified",
+    "Signer reuse, input graph, events, state diffs, network metadata and execution finality are outside this prototype."
+  ],
+  "conclusion": "No privacy ranking or anonymity verdict."
+}

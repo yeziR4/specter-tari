@@ -1,0 +1,9 @@
+{
+  "template": "SpecterReportReceipt",
+  "wasmBytes": 96767,
+  "sha256": "4f50c43bd463a57a3101745d42ee6f794ca10c691f5888f28476fcb0e479b83f",
+  "builtAgainst": "tari_template_lib =0.40.0 from crates.io; resolved dependencies pinned in Cargo.lock; Rust 1.97.1",
+  "engineTests": "Original implementation: 2 older-engine tests passed. Current binary published on mainnet; live receipt transaction 46a39f9bb07b89a130d44ff4415aebedfabdf6c9f89c16f714b948cb429a7391 committed, stored report hash/transaction/signer/epoch matched and all five getter calls committed. No independent consensus-proof verification.",
+  "deploymentStatus": "Published on mainnet: template_9b41600aec8aaefb3c66e00567a060cafbb1e51fb4a904074f4faaabff6cb725; transaction 198f98d7ce75568702c9c3906f1419cf3fb9f53487e05ed829a9e56b6a2c021c; indexer Commit finalized 2026-11-11T14:12:54Z",
+  "fees": "Actual publication fee: 786197 microTARI (0.786197 TARI)"
+}

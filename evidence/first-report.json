@@ -1,0 +1,42 @@
+{
+  "format": "specter-report-v1",
+  "scope": "partial-observation",
+  "sourceCommit": "9f6c04e9107b03d22618d88339e27dd37b1f0c46",
+  "findings": [
+    {
+      "rule": "PUBLIC_COMPONENT_CALL",
+      "status": "observed",
+      "path": "$.observed.fee_instructions[0].CallMethod.call.Address",
+      "value": "component_ae57fb3f8deb34cef1ed966bbe33934cae9c2509c073155b9ca0231f6eabca71",
+      "explanation": "Public component reference for method pay_fee; does not identify a person."
+    },
+    {
+      "rule": "PUBLIC_FEE_COMPONENT",
+      "status": "observed",
+      "path": "$.observed.fee_instructions[0].CallMethod.call.Address",
+      "value": "component_ae57fb3f8deb34cef1ed966bbe33934cae9c2509c073155b9ca0231f6eabca71",
+      "explanation": "Fee-stage pay_fee targets this public component. This alone does not establish who owns it."
+    }
+  ],
+  "unknowns": [
+    "Manually transcribed partial evidence; omitted fields are unknown. Provenance is a supplied claim, not cryptographically verified.",
+    "$.observed.fee_instructions[0].CallMethod: arguments and executed component internals are not analyzed",
+    "$.observed.instructions: missing or invalid instruction array",
+    "Signer reuse, input graph, events, state diffs, network metadata and execution finality are outside this prototype."
+  ],
+  "observedInstructionCount": 1,
+  "conclusion": "No conclusion about anonymity, ownership, finality or transaction validity.",
+  "provenance": {
+    "kind": "manual-transcription-of-public-explorer",
+    "capturedDate": "2026-10-21",
+    "network": "esmeralda",
+    "transactionId": "3ef1a1193ffc0cb38ef1daa6278c7f36f77954e1b4e905171c3a8fa031c0b223",
+    "url": "https://explorer.tari.mw/tx/3ef1a1193ffc0cb38ef1daa6278c7f36f77954e1b4e905171c3a8fa031c0b223",
+    "explorerReportedOutcome": "Commit",
+    "limitations": "Only fee method and target were transcribed from expanded Raw transaction JSON. Args, main instructions, signatures, inputs and all other fields omitted. Not a full transaction archive; no cryptographic finality verification."
+  },
+  "policy": {
+    "status": "unknown",
+    "explanation": "No passing verdict is issued from incomplete inspection."
+  }
+}

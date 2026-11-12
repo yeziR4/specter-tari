@@ -1,0 +1,35 @@
+{
+  "format": "specter-report-v1",
+  "scope": "v1-instruction-fields",
+  "sourceCommit": "9f6c04e9107b03d22618d88339e27dd37b1f0c46",
+  "findings": [
+    {
+      "rule": "PUBLIC_COMPONENT_CALL",
+      "status": "observed",
+      "path": "$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod.call.Address",
+      "value": "component_ae57fb3f8deb34cef1ed966bbe33934cae9c2509c073155b9ca0231f6eabca71",
+      "explanation": "Public component reference for method pay_fee; does not identify a person."
+    },
+    {
+      "rule": "PUBLIC_FEE_COMPONENT",
+      "status": "observed",
+      "path": "$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod.call.Address",
+      "value": "component_ae57fb3f8deb34cef1ed966bbe33934cae9c2509c073155b9ca0231f6eabca71",
+      "explanation": "Fee-stage pay_fee targets this public component. This alone does not establish who owns it."
+    },
+    {
+      "rule": "PUBLIC_COMPONENT_CALL",
+      "status": "observed",
+      "path": "$.transaction.transaction.V1.body.transaction.instructions[0].CallMethod.call.Address",
+      "value": "component_b7d212151546338e8e17975f7d8a4fb67023047357fe41308935fbb75604fdf2",
+      "explanation": "Public component reference for method append_root; does not identify a person."
+    }
+  ],
+  "unknowns": [
+    "$.transaction.transaction.V1.body.transaction.fee_instructions[0].CallMethod: arguments and executed component internals are not analyzed",
+    "$.transaction.transaction.V1.body.transaction.instructions[0].CallMethod: arguments and executed component internals are not analyzed",
+    "Signer reuse, input graph, events, state diffs, network metadata and execution finality are outside this prototype."
+  ],
+  "observedInstructionCount": 2,
+  "conclusion": "No conclusion about anonymity, ownership, finality or transaction validity."
+}

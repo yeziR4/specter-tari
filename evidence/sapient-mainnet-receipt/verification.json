@@ -1,0 +1,21 @@
+{
+  "network": "mainnet",
+  "flow": "Specter -> Sapient approval -> Specter submit -> indexer Commit",
+  "requestId": "278cad44-d05b-4dcf-b9e6-471013d0d4d7",
+  "transactionId": "4dbb50e413ab7c0c51deb0cfa146950936f06d2a9fb2ddd27f44844fc4941776",
+  "component": "component_1a17cec41b6c0fb5a50ef457a87fa16a10e2f5da10bdbe5d18038bad3063111e",
+  "reportSha256": "0f4457fa78730ef2ec3672c43b095b6d6943513e692327dfdd356e190ebc0a92",
+  "inspectedTransaction": "018c99cfbd234d88d4a3664da505f8bc2a9a09d7c65f574ac1f68b19a6ef6a6c",
+  "signer": "c0228454ee12a8cbc4f6126517194f7fb5a9b54bfd9fe3eb664153e36b99341c",
+  "epoch": 38477,
+  "feeMicroTari": 100000,
+  "finalizedUtc": "2026-11-11 20:25:52.0",
+  "status": "stored receipt matches exported report and approved commit instruction",
+  "limitation": "Checked public indexer responses and decoded public component state; no independent verification of signatures or consensus proofs. Hash commitment does not certify report accuracy or anonymity.",
+  "filesSha256": {
+    "envelope.raw.json": "24ce03a0ded49a1a9e1aedb8bb0215ef06ddcb56b9e504a79371ed398a7a1d21",
+    "result.raw.json": "62cf7391fb1103acc915522cac0fd613738409867bba4ebfef1997b03493f8db",
+    "substate.raw.json": "f6446f363eb7d4ef773ba089bf7cc984e3b2b0f6ec521fe4463fa24bbb18c4aa",
+    "report.json": "0f4457fa78730ef2ec3672c43b095b6d6943513e692327dfdd356e190ebc0a92"
+  }
+}
